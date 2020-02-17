@@ -1,0 +1,6 @@
+framework module Pods_MarketPlaceProject {
+  umbrella header "Pods-MarketPlaceProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
