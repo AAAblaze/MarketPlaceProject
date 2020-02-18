@@ -132,6 +132,22 @@ class MUser {
         }
     }
     
+    //MARK: - Resend link methods
+
+    class func resetPasswordFor(email : String, completion: @escaping(_ error: Error?) -> Void){
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            completion(error)
+        }
+    }
+    
+    class func resendVerificationEmail(email : String, completion: @escaping(_ error : Error?) -> Void) {
+        Auth.auth().currentUser?.reload(completion: { (error) in
+            Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                print("resend email error: ", error?.localizedDescription)
+                completion(error)
+            })
+        })
+    }
 }
 
 //MARK: - DownloadUser
@@ -151,8 +167,8 @@ func downloadUserFromFirestore(userId : String, email : String){
             saveUserToFirestore(mUser: user)
         }
     }
+    
 }
-
 
 
 //MARK: - Save user to firebase

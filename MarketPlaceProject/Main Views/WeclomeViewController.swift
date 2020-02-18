@@ -75,12 +75,39 @@ class WeclomeViewController: UIViewController {
     
     @IBAction func forgotPasswordPressed(_ sender: Any) {
         print("forgot pass")
+        if emailTextField.text != "" {
+            resetThePassword()
+        } else {
+            hud.textLabel.text = "Please insert email!"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+        }
     }
     @IBAction func resendEmailButtonPressed(_ sender: Any) {
         print("resend email")
+        MUser.resendVerificationEmail(email: emailTextField.text!) { (error) in
+            print("error resending email", error?.localizedDescription)
+        }
     }
     
     //MARK: - helper
+    
+    private func resetThePassword() {
+        MUser.resetPasswordFor(email: emailTextField.text!) { (error) in
+            if error == nil {
+                self.hud.textLabel.text = "Reset password email sent!"
+                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+            } else {
+                self.hud.textLabel.text = error!.localizedDescription
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+            }
+        }
+    }
     
     private func dismissView() {
         self.dismiss(animated: true, completion: nil)
@@ -129,6 +156,7 @@ class WeclomeViewController: UIViewController {
                     self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
                     self.hud.show(in: self.view)
                     self.hud.dismiss(afterDelay: 2.0)
+                    self.resendButtonOutlet.isHidden = false
                 }
             } else {
                 print("error loging in the user", error!.localizedDescription)
