@@ -42,6 +42,12 @@ class ProfileTableViewController: UITableViewController {
         return 3
     }
     
+    //MARK: - TableView Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     //MARK: - Helpers
     
     private func checkOnboardingStatus(){
@@ -54,6 +60,8 @@ class ProfileTableViewController: UITableViewController {
                 finishRegistrationButtonOutlet.isEnabled = true
                 finishRegistrationButtonOutlet.tintColor = .red
             }
+            
+            purchaseHistoryButtonOutlet.isEnabled = true
         } else {
             finishRegistrationButtonOutlet.setTitle("Logged out", for: .normal)
             finishRegistrationButtonOutlet.isEnabled = false
@@ -77,7 +85,7 @@ class ProfileTableViewController: UITableViewController {
     //MARK: - IBActions
     
     @objc func rightBarButtonItemPressed(){
-        if editButtonItem.title == "Login"{
+        if editBarButtonOutlet.title == "Login"{
             showLoginView()
         } else {
             goToEditProfileView()
@@ -98,6 +106,6 @@ class ProfileTableViewController: UITableViewController {
     }
     
     private func goToEditProfileView(){
-        print("Edit profile")
+        performSegue(withIdentifier: "profileToEditSeg", sender: self)
     }
 }

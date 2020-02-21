@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        initializePaypal()
         
         return true
     }
@@ -34,6 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    //MARK: - Paypal Init
+    func initializePaypal(){
+        PayPalMobile.initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction : "Ab_OcbhXUHrDopQGZjxihHM2LXja0y9t_p3QnjcZFJTsKsUfUWpO4ZzPv9xDG0TGgCWyk1b5jZK4vyNv", PayPalEnvironmentSandbox : "sb-610v11091355@business.example.com"])
     }
 
 
