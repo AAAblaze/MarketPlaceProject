@@ -28,6 +28,7 @@
 		348AEA2423E0DA6100EEBA77 /* HelperFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AEA2323E0DA6100EEBA77 /* HelperFunction.swift */; };
 		348AEA2623E0E81600EEBA77 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AEA2523E0E81600EEBA77 /* ItemViewController.swift */; };
 		348AEA2823E2AAA900EEBA77 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348AEA2723E2AAA900EEBA77 /* ImageCollectionViewCell.swift */; };
+		34996BF12400DEE000B507CD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34996BF02400DEE000B507CD /* SearchViewController.swift */; };
 		34B1B33D23F7936C005C7033 /* WeclomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1B33C23F7936C005C7033 /* WeclomeViewController.swift */; };
 		34B1B33F23F8CEC7005C7033 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1B33E23F8CEC7005C7033 /* MUser.swift */; };
 		34B1B34123FC63D0005C7033 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B1B34023FC63D0005C7033 /* ProfileTableViewController.swift */; };
@@ -64,6 +65,7 @@
 		348AEA2323E0DA6100EEBA77 /* HelperFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunction.swift; sourceTree = "<group>"; };
 		348AEA2523E0E81600EEBA77 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		348AEA2723E2AAA900EEBA77 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		34996BF02400DEE000B507CD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		34B1B33C23F7936C005C7033 /* WeclomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeclomeViewController.swift; sourceTree = "<group>"; };
 		34B1B33E23F8CEC7005C7033 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		34B1B34023FC63D0005C7033 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				343A1F0323DE515000705055 /* AddItemViewController.swift */,
 				348AEA2523E0E81600EEBA77 /* ItemViewController.swift */,
 				347641DC23F6414500255CB8 /* BasketViewController.swift */,
+				34996BF02400DEE000B507CD /* SearchViewController.swift */,
 				34B1B34423FE095A005C7033 /* Login View */,
 				34B1B34023FC63D0005C7033 /* ProfileTableViewController.swift */,
 				34163D5A23FE190500F5BA12 /* EditProfileViewController.swift */,
@@ -331,6 +334,7 @@
 				34F11CAB23D69F42008A8946 /* FirebaseCollectionReference.swift in Sources */,
 				344B04DF23E619C400203BF6 /* Basket.swift in Sources */,
 				348AEA2223E0CEF900EEBA77 /* ItemTableViewCell.swift in Sources */,
+				34996BF12400DEE000B507CD /* SearchViewController.swift in Sources */,
 				343A1F0423DE515000705055 /* AddItemViewController.swift in Sources */,
 				3476C13F23D68AB600EC6E70 /* SceneDelegate.swift in Sources */,
 				348AEA2423E0DA6100EEBA77 /* HelperFunction.swift in Sources */,
